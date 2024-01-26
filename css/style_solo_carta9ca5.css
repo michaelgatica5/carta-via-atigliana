@@ -1,0 +1,199 @@
+html{
+    background-color: #eeeeee;
+}
+.verdep{
+  background-color: #4CAF50 !important;
+}
+.ocultarSoloCarta {
+    display: none !important;
+}
+
+.solocarta{
+	display: none !important;
+}
+
+.cart-box .cart-item .ci-name {
+        padding-left: 135px;
+    height: 100%;
+  padding-right: 0px !important;
+      border-radius: 4px;
+}
+
+.der{
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.h {
+    min-height: 130px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eceff1;
+    font-size: 13px;
+        display: table;
+    overflow: hidden;
+    width: 100%;
+}
+.cart-box .cart-item .ci-name .cin-title {
+    font-weight: 600;
+    max-width: 98% !important; 
+    text-transform: uppercase;
+
+}
+
+.text-description-header{
+    letter-spacing: 0px;
+    font-size: 17px !important;
+    color: #243a75;
+    font-weight: 100;
+    font-family: auto;
+    text-transform: none;
+    margin-top: 0;
+    text-align: center;
+    padding: 14px;
+    line-height: 32px;
+}
+
+.nomar{
+	padding-left: 5px !important;
+	min-height: 80px;
+    max-height: 80px;
+}
+.verencarta{
+	display: block !important;
+}
+.verencartaline{
+	
+	display: inline-block !important;
+	
+}
+.cart-box .cart-item {
+    width: 100%;
+    position: relative;
+    min-height: 90px;
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: 5px;
+}
+.cin-price{
+
+}
+
+.question {
+
+    font-size: 15px !important;
+    text-transform: uppercase;
+	position: relative;
+    background: #b3b3b3;
+    margin: 0;
+ padding: 25px 25px 25px 25px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 25px;
+    border-radius: 4px;
+   
+}
+.plus {
+    position: absolute;
+    margin-left: 10px;
+    z-index: 5;
+    font-size: 3.3em;
+    line-height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+div#page-content {
+  background-color: #eeeeee;
+  min-height: 90vh;
+}
+
+.cart-box .cart-item {
+width: 100%;
+    position: relative;
+    min-height: 120px;
+    border-bottom: 0px solid #f2f2f2;
+    margin-top: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
+    border-radius: 4px;
+}
+
+.cart-box .cart-item .ci-img {
+    width: 130px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.button-add-cart {
+ 
+    padding-top: 5px;
+}
+.item-info {
+    font-size: 12px !important;
+    margin-top: 10px;
+
+}
+.dos{
+	padding-left: 5px !important;
+	    
+}
+.cart-box .cart-item .ci-img .ci-img-product {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    border-top-left-radius: 4px;
+}
+.cart-box .cart-item .ci-price {
+    width: 105px;
+    right: 0px;
+    text-align: right;
+    float: right;
+    top: 0px;
+    position: initial;
+}
+.cart-box .cart-item .ci-name .cin-price {
+    color: #ffffff;
+    font-weight: 400;
+    background-color: #388E3C;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    border-radius: 4px;
+}
+
+.button-add-cart {
+  
+    background-color: #26A69A !important;
+    height: 47px !important;
+}
+
+.cart-box .cart-item .ci-name .cin-price {
+    font-weight: 500 !important;
+    margin-top: 16px;
+    float: left;
+}
+
+
+.logologin{
+	max-height: 40px !important;
+	width: auto !important;
+}
+.nav-logo{
+	display: none;
+}

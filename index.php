@@ -1,6 +1,6 @@
 <?php
-// URL de la API
-$api_url = "https://via-atigliana-admin.onrender.com/api/contenido";
+// URL de la API con HTTPS
+$api_url = "https://via-atigliana.up.railway.app/api/contenido";
 
 // Realizar la solicitud a la API
 $response = file_get_contents($api_url);
@@ -56,7 +56,7 @@ $descripcion = $data['data']['attributes']['descripcion'][0]['children'][0]['tex
       <div class="row icon-service">
           <?php
               // Consumir la API y mostrar las categorías
-              $api_url = 'https://via-atigliana-admin.onrender.com/api/categorias';
+              $api_url = 'https://via-atigliana.up.railway.app/api/categorias';
               $response = file_get_contents($api_url);
               $data = json_decode($response, true);
 
@@ -65,7 +65,7 @@ $descripcion = $data['data']['attributes']['descripcion'][0]['children'][0]['tex
                   $nombre = $attributes['nombre'];
           ?>
                   <div class="col s6 m6 l2">
-                      <a href="carta?categoria=<?php echo ($category['id']); ?>">
+                      <a href="carta.php?categoria=<?php echo ($category['id']); ?>">
                           <div class="content">
                               <div class="in-content">
                                   <div class="in-in-content">

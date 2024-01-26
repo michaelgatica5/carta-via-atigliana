@@ -27,7 +27,7 @@
   <header id="header">
     <div class="nav-wrapper container">
       <div class="header-logo">
-        <a href="index">
+        <a href="index.php">
           <img class="verencarta logonew carta" src="img/logo.png">
         </a>
       </div>
@@ -50,7 +50,7 @@
               <form>
                 <?php
                 // URL de la API
-                $api_url = "https://via-atigliana-admin.onrender.com/api/productos?populate=*";
+                $api_url = "https://via-atigliana.up.railway.app/api/productos?populate=*";
 
                 $json_data = file_get_contents($api_url);
 
@@ -151,7 +151,7 @@
                     echo 'Error al obtener datos de la API.';
                 }
                 ?>
-                <a href="index" style="display: none;"
+                <a href="index.php" style="display: none;"
                   class="btn button-add-cart checkout-button d240 verencarta">VOLVER <i class="fa fa-undo"
                     aria-hidden="true" style="padding-top: 2px;"></i></a>
               </form>

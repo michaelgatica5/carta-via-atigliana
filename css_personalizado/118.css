@@ -69,7 +69,7 @@ min-height: 100vh;
         to top, 
         #9f7944 0px, 
         #9f7944 3px, 
-        transparent 3px
+        white 3px
       ),
       linear-gradient(to right, 
         #9f7944 0px, 
@@ -80,7 +80,7 @@ min-height: 100vh;
         to left, 
         #9f7944 0px, 
         #9f7944 3px, 
-        transparent 3px
+        white 3px
       ),
   
       radial-gradient(
@@ -88,25 +88,25 @@ min-height: 100vh;
         transparent calc(15px - 3px), 
         #9f7944 calc(15px - 3px), 
         #9f7944 15px, 
-        transparent 15px
+        white 15px
       ), 
       radial-gradient(circle at 100% 100%, 
         transparent calc(15px - 3px), 
         #9f7944 calc(15px - 3px), 
         #9f7944 15px, 
-        transparent 15px
+        white 15px
       ), 
       radial-gradient(circle at 100% 0, 
         transparent calc(15px - 3px), 
         #9f7944 calc(15px - 3px), 
         #9f7944 15px, 
-        transparent 15px
+        white 15px
       ), 
       radial-gradient(circle at 0 0, 
         transparent calc(15px - 3px), 
         #9f7944 calc(15px - 3px), 
         #9f7944 15px, 
-        transparent 15px
+        white 15px
       );
     background-position: top center, bottom center, left center, right center, bottom left, bottom right, top right, top left;
     background-size: calc(100% - calc(15px * 2 - 2px)), calc(100% - calc(15px * 2 - 2px)), 100% calc(100% - calc(15px * 2 - 2px)), 100% calc(100% - calc(15px * 2 - 2px)), 50% 50%, 50% 50%, 50% 50%, 50% 50%;
@@ -146,17 +146,18 @@ div#page-content {
 }
 
 .section.home-category .content .in-content .in-in-content h5 {
-    font-size: 10px;
+    font-size: 15px;
     text-transform: uppercase;
     color: #253b75;
     font-family: sans-serif;
     letter-spacing: 0px;
     font-weight: 800;
+    line-height: 25px;
 }
 
 .cart-box .cart-item .ci-name .cin-top {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
 }
 
 .der{
@@ -193,13 +194,13 @@ color: #2c6865  !important;
 }
 
 .cart-box .cart-item .ci-name .cin-title.category {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 27px;
 }
 
 .cart-box .cart-item .ci-name .cin-title.subcategory {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 1px;
     color: #9f7945;
     font-weight: bold;
@@ -214,12 +215,13 @@ color: #2c6865  !important;
 .item-info {
     text-align: center;
     letter-spacing: 0px;
-    font-size: 16px !important;
+    font-size: 18px !important;
     color: #253b75;
     font-weight: 100;
     font-family: VERDANA;
     text-transform: none;
     margin-top: 0;
+    padding-top: 0px;
 }
 
 .logonew.carta{
@@ -246,16 +248,15 @@ background-color: #9f7944 !important;
     float: none;
     width: 200px;
     margin: auto;
-    margin-top: 38px;
+    margin-top: 20px;
     margin-bottom: 35px !important;
     text-align: center;
     letter-spacing: 0px;
-    font-size: 16px !important;
+    font-size: 20px !important;
     color: #253b75;
     font-family: VERDANA;
     text-transform: none;
     background-color: white;
-    border: double;
     border-color: #253b75;
     border-radius: 0;
     padding: 5px;
@@ -297,6 +298,48 @@ header .header-logo {
     width: 100%;
     margin: 0 !important;
 }
+
+header .header-logo .header-sticky{
+    transform: translateY(-200px);
+    transition: all 0.5s ease-out;
+    width: 100%;
+    max-height: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    max-height: 100px;
+    object-fit: contain;
+    width: 100%;
+    background: white;
+    z-index: 10;
+    padding: 12px 0;
+}
+
+header .header-logo.sticky .header-sticky{
+    transform: translateY(0px);
+    box-shadow: -1px 3px 20px 2px rgba(0,0,0,0.43);
+    -webkit-box-shadow: -1px 1px 31px 1px rgba(0,0,0,0.13);
+    -moz-box-shadow: -1px 3px 20px 2px rgba(0,0,0,0.43);
+}
+
+.content-category-name{
+    max-width: 100% !important;
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 28px;
+    color: #253b75;
+    font-weight: bold;
+    font-family: VERDANA;
+    text-transform: none;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+header .header-logo.sticky img.verencarta{
+    visibility: hidden;
+}
+
+
 .logologin {
     max-height: 45px !important;
     width: auto !important;
@@ -340,17 +383,7 @@ height: 200px;
 }
 
 .cart-box .cart-item {
-    /* width: 100%;
-    position: relative;
-    min-height: 120px;
-    margin-top: 15px;
-    background-color: #ffffff00;
-    box-shadow: none !important;
-    border-radius: 0px;
-    background-repeat: no-repeat;
-    margin-bottom: 80px;
-    border: 5px solid #fef4e5;
-    border-radius: 40px; */
+
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
@@ -367,7 +400,7 @@ height: 200px;
         to top, 
         #9f7944 0px, 
         #9f7944 3px, 
-        transparent 3px
+        white 3px
       ),
       linear-gradient(to right, 
         #9f7944 0px, 
@@ -378,7 +411,7 @@ height: 200px;
         to left, 
         #9f7944 0px, 
         #9f7944 3px, 
-        transparent 3px
+        white 3px
       ),
   
       radial-gradient(
@@ -386,31 +419,31 @@ height: 200px;
         transparent calc(30px - 3px), 
         #9f7944 calc(30px - 3px), 
         #9f7944 30px, 
-        transparent 30px
+        white 30px
       ), 
       radial-gradient(circle at 100% 100%, 
         transparent calc(30px - 3px), 
         #9f7944 calc(30px - 3px), 
         #9f7944 30px, 
-        transparent 30px
+        white 30px
       ), 
       radial-gradient(circle at 100% 0, 
         transparent calc(30px - 3px), 
         #9f7944 calc(30px - 3px), 
         #9f7944 30px, 
-        transparent 30px
+        white 30px
       ), 
       radial-gradient(circle at 0 0, 
         transparent calc(30px - 3px), 
         #9f7944 calc(30px - 3px), 
         #9f7944 30px, 
-        transparent 30px
+        white 30px
       );
     background-position: top center, bottom center, left center, right center, bottom left, bottom right, top right, top left;
     background-size: calc(100% - calc(30px * 2 - 3px)), calc(100% - calc(30px * 2 - 3px)), 100% calc(100% - calc(30px * 2 - 3px)), 100% calc(100% - calc(30px * 2 - 3px)), 50% 50%, 50% 50%, 50% 50%, 50% 50%;
     background-repeat: no-repeat;
     box-shadow: none !important;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .cart-box .cart-item .ci-img {
@@ -448,6 +481,7 @@ height: 200px;
     width: calc(100% - 50px);
     margin: 0 auto;
     border-radius: 0;
+    margin-bottom: 25px;
 }
 
     .cart-page {

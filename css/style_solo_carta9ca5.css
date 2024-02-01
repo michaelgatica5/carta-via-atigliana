@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'FONTSPRING DEMO - Etna';
+    src: url('../fonts/FONTSPRINGDEMO-EtnaBoldItalic.eot');
+    src: url('../fonts/FONTSPRINGDEMO-EtnaBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-EtnaBoldItalic.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-EtnaBoldItalic.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-EtnaBoldItalic.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-EtnaBoldItalic.svg#FONTSPRINGDEMO-EtnaBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
 html{
     background-color: #eeeeee;
 }
@@ -44,13 +57,48 @@ html{
     letter-spacing: 0px;
     font-size: 17px !important;
     color: #243a75;
-    font-weight: 100;
+    font-weight: 600;
     font-family: auto;
     text-transform: none;
     margin-top: 0;
     text-align: center;
     padding: 14px;
-    line-height: 32px;
+    line-height: 25px;
+}
+
+.text-appetito{
+    font-family: 'FONTSPRING DEMO - Etna';
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #243a75;
+    margin: 30px 0;
+}
+
+.text-appetito span{
+    font-family: emoji;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.bg-carta{
+    background: url(https://res.cloudinary.com/dl3zcrsnf/image/upload/v1706013230/large_fondooo_12_fb994bc23a.jpg);
+    position: fixed;
+    height: 300px;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+    opacity: .3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 0px 30px 30px white;
+    overflow: hidden;
+}
+
+.nav-wrapper.container{
+    position: relative !important;
+    z-index: 1;
 }
 
 .nomar{

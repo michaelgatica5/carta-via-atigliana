@@ -26,13 +26,17 @@
 <body id="homepage" class="as118">
   <header id="header">
     <div class="nav-wrapper container">
-      <div class="header-logo">
+      <div id="header-logo" class="header-logo">
         <a href="index.php">
           <img class="verencarta logonew carta" src="img/logo.png">
+        </a>
+        <a href="index.php">
+          <img class="header-sticky" src="img/logo-sticky.png">
         </a>
       </div>
     </div>
   </header>
+  <div class="bg-carta"></div>
 
   <style type="text/css">
     .as89 {
@@ -49,18 +53,35 @@
             <div class="cart-box">
               <form>
                 <?php
-                // URL de la API
-                $api_url = "https://via-atigliana.up.railway.app/api/productos?populate=*";
-
-                $json_data = file_get_contents($api_url);
-
-                $data = json_decode($json_data, true);
 
                 $categoriaId = '';
 
                 if (isset($_GET['categoria'])) {
                     $categoriaId = $_GET['categoria'];
                 }
+
+                // URL de la API Local
+                // $api_url = "http://via-atigliana-admin.onrender.com/api/productos?populate=*";
+                // URL de la API
+                $api_url = "https://via-atigliana.up.railway.app/api/productos?populate=*&categoria.id=". $categoriaId ."";
+
+                $json_data = file_get_contents($api_url);
+
+                $data = json_decode($json_data, true);
+
+                // URL de la API Local
+                // $api_url2 = "http://via-atigliana-admin.onrender.com/api/categorias/".$categoriaId."";
+                // URL de la API
+                $api_url2 = "https://via-atigliana.up.railway.app/api/categorias/".$categoriaId."";
+
+                $json_data2 = file_get_contents($api_url2);
+
+                $data2 = json_decode($json_data2, true);
+
+                $categoryName = $data2['data']['attributes']['nombre'];
+                echo '<div class="content-category-name">';
+                  echo $categoryName;
+                echo '</div>';
 
                 if ($data && isset($data['data'])) {
 
@@ -104,7 +125,7 @@
                             echo '<div class="cart-item">';
                             echo '<div class="ci-name h">';
                             echo '<div class="cin-top">';
-                            echo '<div class="cin-title category">' . $categoria;echo '</div>';
+                            echo '<div class="cin-title category">' . $nombre. '</div>';
                             if(!empty($producto['attributes']['subcategoria']['data']['attributes'])) {
                               echo '<br><div class="cin-title subcategory">'. $subcategoria;
                               if(!empty($producto['attributes']['subcategoria']['data']['attributes']['descripcioncorta'])) {
@@ -114,15 +135,17 @@
                             }
                             echo '</div>';
                             echo '</div>';
-                            echo '<div class="ci-img">';
-                            echo '<div class="ci-img-product" style="background-image: url(' . $imagen_url . ');"></div>';
-                            echo '</div>';
-                            echo '<div class="ci-name h">';
-                            echo '<div class="cin-top">';
-                            echo '<div class="cin-title">' . $nombre;
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
+                            if($imagen_url){
+                              echo '<div class="ci-img">';
+                              echo '<div class="ci-img-product" style="background-image: url(' . $imagen_url . ');"></div>';
+                              echo '</div>';
+                            }
+                            // echo '<div class="ci-name h">';
+                            // echo '<div class="cin-top">';
+                            // echo '<div class="cin-title">' . $nombre;
+                            // echo '</div>';
+                            // echo '</div>';
+                            // echo '</div>';
                             echo '<div class="ci-name dos">';
                             echo '<div class="cin-top">';
                             if(!empty($producto['attributes']['descripcion'][0]['children'][0])) {
@@ -157,7 +180,7 @@
               </form>
             </div>
             <div class="row copyright nomodesto"
-              style="position: inherit; bottom: 0; width: 100%; text-align: center; margin-bottom: 10px;margin-top: 10px;margin-bottom: 0px;">
+              style="position: relative; bottom: 0; width: 100%; text-align: center; margin-bottom: 10px;margin-top: 10px;margin-bottom: 0px;">
               <a href="">Creado por <img class="ipage"
                   src="img/ipage.png"></a>
             </div>
@@ -165,10 +188,30 @@
         </div>
       </div>
     </div>
-    <script>
+    <!-- <script>
       $(document).ready(function () {
         $('.cin-title.category').arctext({radius: 500});
       });
+    </script> -->
+
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the header
+      var header = document.getElementById("header-logo");
+
+      // Get the offset position of the navbar
+      var sticky = 230;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
     </script>
   </body>
 </html>

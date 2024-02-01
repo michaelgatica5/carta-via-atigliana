@@ -1,4 +1,6 @@
 <?php
+// URL de la API Local
+// $api_url = "http://via-atigliana-admin.onrender.com/api/contenido";
 // URL de la API con HTTPS
 $api_url = "https://via-atigliana.up.railway.app/api/contenido";
 
@@ -42,19 +44,23 @@ $descripcion = $data['data']['attributes']['descripcion'][0]['children'][0]['tex
 <body id="homepage" class="as118">
   <header id="header">
     <div class="nav-wrapper container">
-      <div class="header-logo">
+      <div id="header-logo" class="header-logo">
         <img class="verencarta logonew carta" src="img/logo.png">
-        <a href="" class="nav-logo">
-          <i class="fa fa-address-card solocarta logasos"></i>
-        </a>
+        <img class="header-sticky" src="img/logo-sticky.png">
       </div>
       <p class="text-description-header"><?php echo $descripcion; ?></p>
+      <p class="text-appetito">
+        Buon appetito<span>!</span>
+      </p>
     </div>
   </header>
+  <div class="bg-carta"></div>
   <div class="section home-category">
     <div class="container">
       <div class="row icon-service">
           <?php
+          // Consumir la API y mostrar las categorías en local
+              // $api_url = 'http://via-atigliana-admin.onrender.com/api/categorias';
               // Consumir la API y mostrar las categorías
               $api_url = 'https://via-atigliana.up.railway.app/api/categorias';
               $response = file_get_contents($api_url);
@@ -87,10 +93,30 @@ $descripcion = $data['data']['attributes']['descripcion'][0]['children'][0]['tex
     </div>
   </div>
 
-  <script>
+  <!-- <script>
       $(document).ready(function () {
         $('.in-content .in-in-content h5').arctext({radius: 500});
       });
+  </script> -->
+
+  <script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("header-logo");
+
+    // Get the offset position of the navbar
+    var sticky = 230;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
   </script>
 </body>
 

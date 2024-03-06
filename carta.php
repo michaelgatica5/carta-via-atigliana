@@ -63,7 +63,7 @@
                 // URL de la API Local
                 // $api_url = "http://via-atigliana-admin.onrender.com/api/productos?populate=*";
                 // URL de la API
-                $api_url = "https://via-atigliana.up.railway.app/api/productos?populate=*&categoria.id=". $categoriaId ."";
+                $api_url = "https://admin-via-atigliana-production.up.railway.app/api/productos?populate=*&categoria.id=". $categoriaId ."";
 
                 $json_data = file_get_contents($api_url);
 
@@ -72,7 +72,7 @@
                 // URL de la API Local
                 // $api_url2 = "http://via-atigliana-admin.onrender.com/api/categorias/".$categoriaId."";
                 // URL de la API
-                $api_url2 = "https://via-atigliana.up.railway.app/api/categorias/".$categoriaId."";
+                $api_url2 = "https://admin-via-atigliana-production.up.railway.app/api/categorias/".$categoriaId."";
 
                 $json_data2 = file_get_contents($api_url2);
 

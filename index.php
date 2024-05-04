@@ -2,7 +2,7 @@
 // URL de la API Local
 // $api_url = "http://via-atigliana-admin.onrender.com/api/contenido";
 // URL de la API con HTTPS
-$api_url = "https://admin-via-atigliana-production.up.railway.app/api/contenido";
+$api_url = "https://admin-via-atigliana-production-874f.up.railway.app/api/contenido";
 
 // Realizar la solicitud a la API
 $response = file_get_contents($api_url);
@@ -62,7 +62,7 @@ $descripcion = $data['data']['attributes']['descripcion'][0]['children'][0]['tex
           // Consumir la API y mostrar las categorías en local
               // $api_url = 'http://via-atigliana-admin.onrender.com/api/categorias';
               // Consumir la API y mostrar las categorías
-              $api_url = 'https://admin-via-atigliana-production.up.railway.app/api/categorias';
+              $api_url = 'https://admin-via-atigliana-production-874f.up.railway.app/api/categorias';
               $response = file_get_contents($api_url);
               $data = json_decode($response, true);
 
